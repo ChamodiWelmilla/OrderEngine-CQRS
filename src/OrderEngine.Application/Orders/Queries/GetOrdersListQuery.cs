@@ -6,7 +6,7 @@ using OrderEngine.Application.Common.Interfaces;
 using OrderEngine.Application.Dtos;
 using OrderEngine.Domain.Enums;
 
-public record GetOrdersListQuery(OrderStatus? Status) : IRequest<List<OrderDto>>;
+public record GetOrdersListQuery(OrderStatus? Status = null) : IRequest<List<OrderDto>>;
 
 public class GetOrdersListQueryHandler : IRequestHandler<GetOrdersListQuery, List<OrderDto>>
 {
